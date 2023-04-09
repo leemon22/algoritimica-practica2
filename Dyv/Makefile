@@ -1,17 +1,20 @@
 CC=gcc
 CFLAGS=-O2 -Wall -lstdc++ -lm
 
-all: especifico clean
+all: dyv clean
 
 
-especifico: especifico.o vaca.o main.o
-	$(CC) $(CFLAGS) -o especifico $^
+dyv: dyv.o vaca.o main.o referencia.o
+	$(CC) $(CFLAGS) -o dyv $^
 
-main.o: main.cpp especifico.h vaca.h
+main.o: main.cpp dyv.h vaca.h
 	$(CC) $(CFLAGS) -c main.cpp
 
-especifico.o: especifico.cpp especifico.h vaca.h
-	$(CC) $(CFLAGS) -c especifico.cpp
+dyv.o: dyv.cpp dyv.h vaca.h referencia.h
+	$(CC) $(CFLAGS) -c dyv.cpp
+
+referencia.o: referencia.cpp referencia.h vaca.h
+	$(CC) $(CFLAGS) -c referencia.cpp
 
 vaca.o: vaca.cpp vaca.h
 	$(CC) $(CFLAGS) -c vaca.cpp

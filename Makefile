@@ -1,4 +1,4 @@
-all: especifico
+all: generador especifico dyv
 	echo "hecho"
 
 generador:

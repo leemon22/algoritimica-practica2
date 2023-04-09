@@ -3,7 +3,7 @@
 #include <fstream>
 #include <string>
 #include "vaca.h"
-#include "especifico.h"
+#include "dyv.h"
 
 using namespace std;
 
@@ -11,6 +11,8 @@ int leerVacas(vector<vaca> &vacas, char *datos);
 
 int main(int argc, char * argv[]){
 	
+	const int UMBRAL = 10;
+
 	if(argc != 2){
 		return 1;
 	}
@@ -22,12 +24,12 @@ int main(int argc, char * argv[]){
 		return 1;
 	}
 
-	pair<vaca, vaca> par_mas_cercano = algoritmoEspecifico(vacas);
+	pair<vaca, vaca> par_mas_cercano = algoritmoDyV(vacas, UMBRAL);
 	vaca a = par_mas_cercano.first;
 	vaca b = par_mas_cercano.second;
 	float distancia = a.distanciaReal(b);
 
-	cout << "PAR DE VACAS MÁS CERCANO USANDO EL ALGORITMO ESPECIFICO" << endl;
+	cout << "PAR DE VACAS MÁS CERCANO USANDO EL ALGORITMO DIVIDE Y VENCERÁS" << endl;
 	cout << "Coordenadas de las vacas:" << endl;
 	cout << a.getX() << "\t" << a.getY() << endl;
 	cout << b.getX() << "\t" << b.getY() << endl;

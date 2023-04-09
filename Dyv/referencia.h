@@ -6,14 +6,15 @@
 class referencia{
 
 private:
-	vaca *p;
+	const vaca *p;
 
 public:
 
 	referencia(const vaca &v);
+	referencia();
 	referencia(const referencia &r);
 
-	vaca getVaca();
+	const vaca &getVaca() const;
 	float distancia(const referencia &other) const;
 };
 

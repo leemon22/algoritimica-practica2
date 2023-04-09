@@ -1,6 +1,6 @@
 CC=gcc
-# CFLAGS=-O2 -Wall -lstdc++ -lm
-CFLAGS=-O2 -Wall -static-libstdc++ -lm
+CFLAGS=-O2 -Wall -lstdc++ -lm
+# CFLAGS=-O2 -Wall -libstdc++ -lm
 
 all: generador clean
 
