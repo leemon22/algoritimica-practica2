@@ -16,7 +16,7 @@ int main(int argc, char * argv[]){
 	vector<pair<float, float>> v = generadorCoords(stoi(argv[1]));
 	
 	ofstream o;
-	o.open("Vacasgeolocalizadas.txt");
+	o.open("Vacasgeolocalizadas" + to_string(v.size()) + ".txt");
 	
 	for(int i = 0 ; i < v.size() ; i++){
 		o << v[i].first << "\t" << v[i].second;
