@@ -12,14 +12,16 @@ int leerVacas(vector<vaca> &vacas, char *datos);
 
 int main(int argc, char * argv[]){
 	
-	const int UMBRAL = 10;
+	/* const int UMBRAL = 10; */
 
-	if(argc != 2){
+	if(argc != 3){
 		return 1;
 	}
 
+	int UMBRAL = stoi(argv[1]);
+
 	vector<vaca> vacas;
-	int estadoLectura = leerVacas(vacas, argv[1]);
+	int estadoLectura = leerVacas(vacas, argv[2]);
 	
 	if(estadoLectura != 0){
 		return 1;
