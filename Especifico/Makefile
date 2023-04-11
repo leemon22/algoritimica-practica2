@@ -1,5 +1,5 @@
-CC=gcc
-CFLAGS=-O2 -Wall -lstdc++ -lm
+CC=g++
+CFLAGS=-O2
 
 all: especifico clean
 

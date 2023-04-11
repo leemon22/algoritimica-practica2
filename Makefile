@@ -1,5 +1,4 @@
 all: generador especifico dyv
-	echo "hecho"
 
 generador:
 	cd ./Generador && $(MAKE)
